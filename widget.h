@@ -2,14 +2,6 @@
 #define WIDGET_H
 
 #include <QWidget>
-#include "second.h"
-#include "gallery.h"
-
-QT_BEGIN_NAMESPACE
-namespace Ui {
-class Widget;
-}
-QT_END_NAMESPACE
 
 class Widget : public QWidget
 {
@@ -18,13 +10,5 @@ class Widget : public QWidget
 public:
     Widget(QWidget *parent = nullptr);
     ~Widget();
-
-public slots:
-    void on_pushButton_clicked();
-
-private:
-    Ui::Widget *ui;
-    second *s;
-    Gallery *g;
 };
 #endif // WIDGET_H
