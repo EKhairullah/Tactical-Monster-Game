@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1157</width>
+    <height>746</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color:	rgb(30, 30, 30);
+background-image: url(:/chars/ChatGPT Image Apr 23, 2025, 09_53_30 AM.png);</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QGridLayout" name="gridLayout">
+    <item row="1" column="3">
+     <widget class="QPushButton" name="Agent1">
+      <property name="styleSheet">
+       <string notr="true">color: rgb(224, 27, 36);
+background-color: transparent;</string>
+      </property>
+      <property name="text">
+       <string>[ Agent A ▼ ]</string>
+      </property>
+     </widget>
+    </item>
+    <item row="2" column="5" rowspan="5" colspan="2">
+     <widget class="QFrame" name="Frame2">
+      <property name="styleSheet">
+       <string notr="true"/>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::Shape::StyledPanel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Shadow::Raised</enum>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout_3">
+       <item>
+        <widget class="QPushButton" name="button12">
+         <property name="styleSheet">
+          <string notr="true">background-color: rgb(181, 131, 90);</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+         <property name="checkable">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="button22">
+         <property name="styleSheet">
+          <string notr="true">background-color: rgb(198, 70, 0);</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+         <property name="checkable">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="button32">
+         <property name="styleSheet">
+          <string notr="true">background-color: rgb(246, 211, 45);</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+         <property name="checkable">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="button42">
+         <property name="styleSheet">
+          <string notr="true">background-color: rgb(145, 65, 172);</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+         <property name="checkable">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="label_4">
+         <property name="text">
+          <string/>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+    <item row="0" column="5">
+     <widget class="QLabel" name="player2">
+      <property name="styleSheet">
+       <string notr="true">color: rgb(230, 97, 0);
+font: 500 18pt &quot;Ubuntu Sans&quot;;
+border-color: rgb(129, 61, 156);
+</string>
+      </property>
+      <property name="text">
+       <string>Ali Ahmad Ahmadi</string>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="3">
+     <widget class="QLabel" name="player1">
+      <property name="styleSheet">
+       <string notr="true">color: rgb(230, 97, 0);
+font: 500 18pt &quot;Ubuntu Sans&quot;;
+border-color: rgb(129, 61, 156);
+</string>
+      </property>
+      <property name="text">
+       <string>Jim Carry RAsilnove</string>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="4" rowspan="7">
+     <widget class="QGraphicsView" name="graphicsView">
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(41, 41, 41);
+border-radius: 50% 20% / 10% 40%;</string>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="5">
+     <widget class="QPushButton" name="Agent2">
+      <property name="styleSheet">
+       <string notr="true">background-color: transparent;
+color: red;
+border: 3px solid #00;</string>
+      </property>
+      <property name="text">
+       <string>[ Agent B ▼ ]</string>
+      </property>
+     </widget>
+    </item>
+    <item row="2" column="3" rowspan="5">
+     <widget class="QFrame" name="Frame1">
+      <property name="frameShape">
+       <enum>QFrame::Shape::StyledPanel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Shadow::Raised</enum>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout">
+       <item>
+        <widget class="QPushButton" name="button11">
+         <property name="styleSheet">
+          <string notr="true">background-color: white;</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+         <property name="iconSize">
+          <size>
+           <width>20</width>
+           <height>20</height>
+          </size>
+         </property>
+         <property name="checkable">
+          <bool>true</bool>
+         </property>
+         <property name="checked">
+          <bool>false</bool>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="button21">
+         <property name="styleSheet">
+          <string notr="true">background-color: rgb(237, 51, 59);</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+         <property name="checkable">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="button31">
+         <property name="styleSheet">
+          <string notr="true">background-color: rgb(192, 28, 40);</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+         <property name="checkable">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="button41">
+         <property name="styleSheet">
+          <string notr="true">background-color: rgb(97, 53, 131);</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+         <property name="checkable">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="label_3">
+         <property name="text">
+          <string/>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1157</width>
+     <height>23</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
