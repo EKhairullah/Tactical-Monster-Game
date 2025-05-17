@@ -32,4 +32,5 @@
         <file>agentplayer2.png</file>
         <file>agentplayer1.webp</file>
     </qresource>
+    <qresource prefix="/"/>
 </RCC>
