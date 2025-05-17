@@ -1,0 +1,16 @@
+<RCC>
+    <qresource prefix="/grids">
+        <file>grid8.txt</file>
+        <file>grid7.txt</file>
+        <file>grid6.txt</file>
+        <file>grid5.txt</file>
+        <file>grid4.txt</file>
+        <file>grid3.txt</file>
+        <file>grid2.txt</file>
+        <file>grid1.txt</file>
+    </qresource>
+    <qresource prefix="/images">
+        <file>ground6.jpg</file>
+        <file>../Sample/secondpageImage.png</file>
+    </qresource>
+</RCC>

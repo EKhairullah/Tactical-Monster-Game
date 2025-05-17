@@ -1,0 +1,2 @@
+set(__QT_DEPLOY_TARGET_GraphicLearning_FILE /home/enayatullah-balaghi/Downloads/QT/QtExcercise/GraphicLearning/build/Desktop_Qt_6_8_2-Debug/GraphicLearning)
+set(__QT_DEPLOY_TARGET_GraphicLearning_TYPE EXECUTABLE)

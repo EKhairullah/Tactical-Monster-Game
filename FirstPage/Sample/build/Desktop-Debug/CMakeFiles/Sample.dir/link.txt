@@ -1,0 +1,1 @@
+/usr/bin/clang++-18 -DQT_QML_DEBUG -g CMakeFiles/Sample.dir/agentpage.cpp.o CMakeFiles/Sample.dir/main.cpp.o CMakeFiles/Sample.dir/propreties.cpp.o CMakeFiles/Sample.dir/rockwidget.cpp.o CMakeFiles/Sample.dir/secondpage.cpp.o -o Sample  -lQt::Widgets 

@@ -1,0 +1,10 @@
+<RCC>
+    <qresource prefix="/images">
+        <file>header.jpg</file>
+        <file>secondpageImage.png</file>
+        <file>arbitaryBack.jpeg</file>
+    </qresource>
+    <qresource prefix="/Intro">
+        <file>Intro.jpg</file>
+    </qresource>
+</RCC>

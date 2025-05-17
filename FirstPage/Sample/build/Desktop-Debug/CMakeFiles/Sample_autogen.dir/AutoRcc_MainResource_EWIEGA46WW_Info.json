@@ -1,0 +1,30 @@
+{
+	"BUILD_DIR" : "/home/khairullah/Desktop/project./Sample/build/Desktop-Debug/Sample_autogen",
+	"CMAKE_BINARY_DIR" : "/home/khairullah/Desktop/project./Sample/build/Desktop-Debug",
+	"CMAKE_CURRENT_BINARY_DIR" : "/home/khairullah/Desktop/project./Sample/build/Desktop-Debug",
+	"CMAKE_CURRENT_SOURCE_DIR" : "/home/khairullah/Desktop/project./Sample",
+	"CMAKE_SOURCE_DIR" : "/home/khairullah/Desktop/project./Sample",
+	"GENERATOR" : "Unix Makefiles",
+	"INCLUDE_DIR" : "/home/khairullah/Desktop/project./Sample/build/Desktop-Debug/Sample_autogen/include",
+	"INPUTS" : 
+	[
+		"/home/khairullah/Desktop/project./Sample/grids/grid4.txt",
+		"/home/khairullah/Desktop/project./Sample/grids/grid6.txt",
+		"/home/khairullah/Desktop/project./Sample/grids/grid3.txt",
+		"/home/khairullah/Desktop/project./Sample/grids/grid2.txt",
+		"/home/khairullah/Desktop/project./Sample/grids/grid7.txt",
+		"/home/khairullah/Desktop/project./Sample/grids/grid5.txt",
+		"/home/khairullah/Desktop/project./Sample/grids/grid1.txt",
+		"/home/khairullah/Desktop/project./Sample/grids/grid8.txt"
+	],
+	"LOCK_FILE" : "/home/khairullah/Desktop/project./Sample/build/Desktop-Debug/CMakeFiles/Sample_autogen.dir/AutoRcc_MainResource_EWIEGA46WW_Lock.lock",
+	"MULTI_CONFIG" : false,
+	"OPTIONS" : [ "-name", "MainResource" ],
+	"OUTPUT_CHECKSUM" : "EWIEGA46WW",
+	"OUTPUT_NAME" : "qrc_MainResource.cpp",
+	"RCC_EXECUTABLE" : "/usr/lib/qt6/libexec/rcc",
+	"RCC_LIST_OPTIONS" : [ "--list" ],
+	"SETTINGS_FILE" : "/home/khairullah/Desktop/project./Sample/build/Desktop-Debug/CMakeFiles/Sample_autogen.dir/AutoRcc_MainResource_EWIEGA46WW_Used.txt",
+	"SOURCE" : "/home/khairullah/Desktop/project./Sample/MainResource.qrc",
+	"VERBOSITY" : 0
+}

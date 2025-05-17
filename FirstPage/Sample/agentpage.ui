@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>agentPage</class>
+ <widget class="QMainWindow" name="agentPage">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>80</y>
+      <width>771</width>
+      <height>441</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap resource="resources.qrc">:/images/arbitaryBack.jpeg</pixmap>
+    </property>
+    <property name="scaledContents">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="backButton">
+    <property name="geometry">
+     <rect>
+      <x>40</x>
+      <y>20</y>
+      <width>131</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">    button-&gt;setStyleSheet(
+        &quot;QPushButton {&quot;
+        &quot;   color: white;&quot;
+        &quot;   font-size: 16px;&quot;
+        &quot;   font-weight: bold;&quot;
+        &quot;   background-color: qlineargradient(x1:0, y1:0, x2:1, y2:0, stop:0 #ff512f, stop:1 #dd2476);&quot;
+        &quot;   border-radius: 8px;&quot;
+        &quot;   padding: 5px 10px;&quot;
+        &quot;   border: 1px solid #ffffff;&quot;
+        &quot;}&quot;
+        &quot;QPushButton:hover {&quot;
+        &quot;   background-color: qlineargradient(x1:0, y1:0, x2:1, y2:0, stop:0 #dd2476, stop:1 #ff512f);&quot;
+        &quot;}&quot;
+        &quot;QPushButton:pressed {&quot;
+        &quot;   background-color: qlineargradient(x1:0, y1:0, x2:1, y2:0, stop:0 #cc1c66, stop:1 #ee4025);&quot;
+        &quot;}&quot;
+        );</string>
+    </property>
+    <property name="text">
+     <string>Back</string>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>800</width>
+     <height>23</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources>
+  <include location="resources.qrc"/>
+ </resources>
+ <connections/>
+</ui>

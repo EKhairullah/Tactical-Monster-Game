@@ -1,0 +1,30 @@
+{
+	"BUILD_DIR" : "/home/enayatullah-balaghi/Downloads/QT/QtExcercise/Sample/build/Extra-Debug/Sample_autogen",
+	"CMAKE_BINARY_DIR" : "/home/enayatullah-balaghi/Downloads/QT/QtExcercise/Sample/build/Extra-Debug",
+	"CMAKE_CURRENT_BINARY_DIR" : "/home/enayatullah-balaghi/Downloads/QT/QtExcercise/Sample/build/Extra-Debug",
+	"CMAKE_CURRENT_SOURCE_DIR" : "/home/enayatullah-balaghi/Downloads/QT/QtExcercise/Sample",
+	"CMAKE_SOURCE_DIR" : "/home/enayatullah-balaghi/Downloads/QT/QtExcercise/Sample",
+	"GENERATOR" : "Unix Makefiles",
+	"INCLUDE_DIR" : "/home/enayatullah-balaghi/Downloads/QT/QtExcercise/Sample/build/Extra-Debug/Sample_autogen/include",
+	"INPUTS" : 
+	[
+		"/home/enayatullah-balaghi/Downloads/QT/QtExcercise/Sample/grids/grid4.txt",
+		"/home/enayatullah-balaghi/Downloads/QT/QtExcercise/Sample/grids/grid6.txt",
+		"/home/enayatullah-balaghi/Downloads/QT/QtExcercise/Sample/grids/grid3.txt",
+		"/home/enayatullah-balaghi/Downloads/QT/QtExcercise/Sample/grids/grid2.txt",
+		"/home/enayatullah-balaghi/Downloads/QT/QtExcercise/Sample/grids/grid7.txt",
+		"/home/enayatullah-balaghi/Downloads/QT/QtExcercise/Sample/grids/grid5.txt",
+		"/home/enayatullah-balaghi/Downloads/QT/QtExcercise/Sample/grids/grid1.txt",
+		"/home/enayatullah-balaghi/Downloads/QT/QtExcercise/Sample/grids/grid8.txt"
+	],
+	"LOCK_FILE" : "/home/enayatullah-balaghi/Downloads/QT/QtExcercise/Sample/build/Extra-Debug/CMakeFiles/Sample_autogen.dir/AutoRcc_MainResource_EWIEGA46WW_Lock.lock",
+	"MULTI_CONFIG" : false,
+	"OPTIONS" : [ "-name", "MainResource" ],
+	"OUTPUT_CHECKSUM" : "EWIEGA46WW",
+	"OUTPUT_NAME" : "qrc_MainResource.cpp",
+	"RCC_EXECUTABLE" : "/home/enayatullah-balaghi/Qt/6.8.2/gcc_64/libexec/rcc",
+	"RCC_LIST_OPTIONS" : [ "--list" ],
+	"SETTINGS_FILE" : "/home/enayatullah-balaghi/Downloads/QT/QtExcercise/Sample/build/Extra-Debug/CMakeFiles/Sample_autogen.dir/AutoRcc_MainResource_EWIEGA46WW_Used.txt",
+	"SOURCE" : "/home/enayatullah-balaghi/Downloads/QT/QtExcercise/Sample/MainResource.qrc",
+	"VERBOSITY" : 0
+}

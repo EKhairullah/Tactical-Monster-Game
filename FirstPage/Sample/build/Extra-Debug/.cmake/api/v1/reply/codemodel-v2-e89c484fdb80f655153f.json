@@ -1,0 +1,78 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"jsonFile" : "directory-.-Debug-f5ebdc15457944623624.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.16"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "Sample",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "Sample::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Sample-Debug-55c09c4edc240783cb96.json",
+					"name" : "Sample",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Sample_autogen::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Sample_autogen-Debug-4c2f7761c3499aa98190.json",
+					"name" : "Sample_autogen",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Sample_autogen_timestamp_deps::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Sample_autogen_timestamp_deps-Debug-3a2a46b0cbdf7d4c4836.json",
+					"name" : "Sample_autogen_timestamp_deps",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/home/enayatullah-balaghi/Downloads/QT/QtExcercise/Sample/build/Extra-Debug",
+		"source" : "/home/enayatullah-balaghi/Downloads/QT/QtExcercise/Sample"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 6
+	}
+}

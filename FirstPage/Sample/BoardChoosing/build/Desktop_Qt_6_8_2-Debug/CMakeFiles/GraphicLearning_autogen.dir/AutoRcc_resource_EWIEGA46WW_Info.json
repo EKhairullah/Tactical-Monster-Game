@@ -1,0 +1,32 @@
+{
+	"BUILD_DIR" : "/home/enayatullah-balaghi/Downloads/QT/QtExcercise/GraphicLearning/build/Desktop_Qt_6_8_2-Debug/GraphicLearning_autogen",
+	"CMAKE_BINARY_DIR" : "/home/enayatullah-balaghi/Downloads/QT/QtExcercise/GraphicLearning/build/Desktop_Qt_6_8_2-Debug",
+	"CMAKE_CURRENT_BINARY_DIR" : "/home/enayatullah-balaghi/Downloads/QT/QtExcercise/GraphicLearning/build/Desktop_Qt_6_8_2-Debug",
+	"CMAKE_CURRENT_SOURCE_DIR" : "/home/enayatullah-balaghi/Downloads/QT/QtExcercise/GraphicLearning",
+	"CMAKE_SOURCE_DIR" : "/home/enayatullah-balaghi/Downloads/QT/QtExcercise/GraphicLearning",
+	"GENERATOR" : "Unix Makefiles",
+	"INCLUDE_DIR" : "/home/enayatullah-balaghi/Downloads/QT/QtExcercise/GraphicLearning/build/Desktop_Qt_6_8_2-Debug/GraphicLearning_autogen/include",
+	"INPUTS" : 
+	[
+		"/home/enayatullah-balaghi/Downloads/QT/QtExcercise/GraphicLearning/ground6.jpg",
+		"/home/enayatullah-balaghi/Downloads/QT/QtExcercise/Sample/secondpageImage.png",
+		"/home/enayatullah-balaghi/Downloads/QT/QtExcercise/GraphicLearning/grid4.txt",
+		"/home/enayatullah-balaghi/Downloads/QT/QtExcercise/GraphicLearning/grid6.txt",
+		"/home/enayatullah-balaghi/Downloads/QT/QtExcercise/GraphicLearning/grid3.txt",
+		"/home/enayatullah-balaghi/Downloads/QT/QtExcercise/GraphicLearning/grid2.txt",
+		"/home/enayatullah-balaghi/Downloads/QT/QtExcercise/GraphicLearning/grid7.txt",
+		"/home/enayatullah-balaghi/Downloads/QT/QtExcercise/GraphicLearning/grid5.txt",
+		"/home/enayatullah-balaghi/Downloads/QT/QtExcercise/GraphicLearning/grid1.txt",
+		"/home/enayatullah-balaghi/Downloads/QT/QtExcercise/GraphicLearning/grid8.txt"
+	],
+	"LOCK_FILE" : "/home/enayatullah-balaghi/Downloads/QT/QtExcercise/GraphicLearning/build/Desktop_Qt_6_8_2-Debug/CMakeFiles/GraphicLearning_autogen.dir/AutoRcc_resource_EWIEGA46WW_Lock.lock",
+	"MULTI_CONFIG" : false,
+	"OPTIONS" : [ "-name", "resource" ],
+	"OUTPUT_CHECKSUM" : "EWIEGA46WW",
+	"OUTPUT_NAME" : "qrc_resource.cpp",
+	"RCC_EXECUTABLE" : "/home/enayatullah-balaghi/Qt/6.8.2/gcc_64/libexec/rcc",
+	"RCC_LIST_OPTIONS" : [ "--list" ],
+	"SETTINGS_FILE" : "/home/enayatullah-balaghi/Downloads/QT/QtExcercise/GraphicLearning/build/Desktop_Qt_6_8_2-Debug/CMakeFiles/GraphicLearning_autogen.dir/AutoRcc_resource_EWIEGA46WW_Used.txt",
+	"SOURCE" : "/home/enayatullah-balaghi/Downloads/QT/QtExcercise/GraphicLearning/resource.qrc",
+	"VERBOSITY" : 0
+}

@@ -1,0 +1,12 @@
+<RCC>
+    <qresource prefix="/ground">
+        <file>grids/grid1.txt</file>
+        <file>grids/grid2.txt</file>
+        <file>grids/grid3.txt</file>
+        <file>grids/grid4.txt</file>
+        <file>grids/grid5.txt</file>
+        <file>grids/grid6.txt</file>
+        <file>grids/grid7.txt</file>
+        <file>grids/grid8.txt</file>
+    </qresource>
+</RCC>
