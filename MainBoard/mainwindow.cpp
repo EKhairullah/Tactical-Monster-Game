@@ -5,33 +5,11 @@
 #include <QTextStream>
 #include <QMouseEvent>
 #include <QMessageBox>
-#include <QRegularExpression>
-
-
-int MainWindow::address = 1;
-
-MainWindow::MainWindow(QWidget *parent, int i)
-
 MainWindow::MainWindow(QWidget *parent)
-
     : QMainWindow(parent)
     , ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
-
-    this->address = i;
-    currentPlayer = 1;
-    ui->player1->setText("Ali Ahmad");
-    ui->player2->setText("Abbas Ahmadi");
-    scene = new QGraphicsScene(this);
-    ui->graphicsView->setScene(scene);
-
-    hexController = new HexagonController(this, scene);
-
-    ui->Agent1->setDisabled(false);
-    ui->Agent2->setDisabled(true);
-    ui->Frame1->setHidden(false);
-
 
     currentPlayer = 1;
 
@@ -39,7 +17,6 @@ MainWindow::MainWindow(QWidget *parent)
     ui->Agent1->setDisabled(false);
     ui->Agent2->setDisabled(true);
     ui->Frame1->setHidden(true);
-
     ui->Frame2->setHidden(true);
 
     ui->graphicsView->viewport()->installEventFilter(this);
@@ -69,10 +46,6 @@ MainWindow::MainWindow(QWidget *parent)
 
     QString redStyle = R"(
 QPushButton {
-
-    background-color: black;
-    color: rgb(224, 27, 36);
-
     color: rgb(224, 27, 36);
     background-color: transparent;
     border: 2px solid rgb(224, 27, 36);
@@ -108,7 +81,6 @@ QPushButton:checked {
     ui->button21->setStyleSheet(redStyle);
     ui->button31->setStyleSheet(redStyle);
     ui->button41->setStyleSheet(redStyle);
-
     ui->button11->setCheckable(true);
     ui->button21->setCheckable(true);
     ui->button31->setCheckable(true);
@@ -177,126 +149,54 @@ QPushButton:checked {
     ui->button42->setStyleSheet(greenStyle);
 
 
-    qDebug() << this->address << " ";
-
-    if(this->address == 1)     hexController->initializeBoard(":/boards/grids/grid1.txt");
-    else if(address == 2) hexController->initializeBoard(":/boards/grids/grid2.txt");
-    else if(address == 3) hexController->initializeBoard(":/boards/grids/grid3.txt");
-    else if(address == 4) hexController->initializeBoard(":/boards/grids/grid4.txt");
-    else if(address == 5) hexController->initializeBoard(":/boards/grids/grid5.txt");
-    else if(address == 6) hexController->initializeBoard(":/boards/grids/grid6.txt");
-    else if(address == 7) hexController->initializeBoard(":/boards/grids/grid7.txt");
-    else if(address == 8) hexController->initializeBoard(":/boards/grids/grid8.txt");
-    ui->graphicsView->setRenderHint(QPainter::Antialiasing);
-    ui->graphicsView->fitInView(scene->sceneRect(), Qt::KeepAspectRatio);
-    ui->graphicsView->scale(17, 17);
-
-
-    connect(hexController, &HexagonController::playerChanged,
-            this, &MainWindow::onPlayerChanged);
-
-    StartGame();
-}
-
+    QFile file(":/boards/grids/grid8.txt");
 
     QGraphicsScene *scene = new QGraphicsScene(this);
 
-    // Hexagon dimensions
-    const qreal hexWidth = 80;
-    const qreal hexHeight = 69.4; // hexHeight = hexWidth * sqrt(3)/2
-
-    // Hexagon shape (pointy top)
-    QPolygonF hexagon;
-    hexagon << QPointF(hexWidth*0.25, 0)
-            << QPointF(hexWidth*0.75, 0)
-            << QPointF(hexWidth, hexHeight*0.5)
-            << QPointF(hexWidth*0.75, hexHeight)
-            << QPointF(hexWidth*0.25, hexHeight)
-            << QPointF(0, hexHeight*0.5);
-
-    // Parse the board
-    QFile file(":/boards/grids/grid8.txt");
     if (file.open(QIODevice::ReadOnly | QIODevice::Text)) {
-        QStringList lines;
         QTextStream in(&file);
+        QString line;
+        int row = 0;
+
         while (!in.atEnd()) {
-            lines << in.readLine();
-        }
-        file.close();
+            line = in.readLine();
 
-        for (int row = 0; row < lines.size(); row++) {
-            const QString &line = lines[row];
-            for (int col = 0; col < line.length()-1; col++) { // Note: -1 to prevent out-of-bounds
-                if (line[col] == '/') {
-                    QChar ch = line[col+1]; // Get the character after '/'
+            for (int col = 0; col < line.length(); ++col) {
+                QChar ch = line[col];
+                QString chStr(ch);
 
-                    // Skip if it's a border character
-                    if (ch == '\\' || ch == '_' || ch == '|') continue;
+                QGraphicsTextItem *textItem = scene->addText(chStr);
+                if(chStr != '1' && chStr != '2' && chStr != '~' && chStr != '#') textItem->setHtml(QString("<span style='color: rgb(0, 255, 0);'>%1</span>").arg(chStr));
+                textItem->setFont(QFont("Courier", 16));
 
-                    // Calculate hexagon position
-                    qreal x = (col / 6.0) * hexWidth * 1.5;
-                    qreal y = row * hexHeight * 0.5;
+                int sceneX = col * this->cellWidth;
+                int sceneY = row * this->cellHeight;
+                textItem->setPos(sceneX, sceneY);
 
-                    // Create hexagon
-                    QGraphicsPolygonItem *hexItem = new QGraphicsPolygonItem(hexagon);
-                    hexItem->setPos(x, y);
 
-                    // Set color based on content
-                    if (ch == '1') {
-                        hexItem->setBrush(QColor(100, 255, 100)); // Light green
-                    } else if (ch == '2') {
-                        hexItem->setBrush(QColor(255, 255, 100)); // Yellow
-                    } else if (ch == '#') {
-                        hexItem->setBrush(QColor(100, 100, 255)); // Blue
-                    } else if (ch == '~') {
-                        hexItem->setBrush(QColor(255, 150, 200)); // Pink
-                    } else {
-                        hexItem->setBrush(Qt::white); // Empty
-                    }
+                if (ch == '1' || ch == '2' || ch == '~' || ch == '#') {
 
-                    hexItem->setPen(QPen(Qt::black, 1));
-                    scene->addItem(hexItem);
-
-                    // Add text if not empty
-                    if (ch != ' ' && ch != '#') {
-                        QGraphicsTextItem *textItem = scene->addText(QString(ch));
-                        textItem->setFont(QFont("Arial", 12, QFont::Bold));
-                        textItem->setDefaultTextColor(Qt::black);
-
-                        // Center text
-                        QRectF textRect = textItem->boundingRect();
-                        textItem->setPos(x + hexWidth/2 - textRect.width()/2,
-                                         y + hexHeight/2 - textRect.height()/2);
-                    }
-
-                    // Store game state
                     Cell cell;
-                    cell.type = (ch == ' ') ? '\0' : ch.toLatin1();
-                    cell.occupied = (ch == '#' || ch == '~');
-                    cell.player = (ch == '1') ? 1 : (ch == '2') ? 2 : 0;
-                    QPointF scenePos(x + hexWidth/2, y + hexHeight/2);
+                    cell.type = ch.toLatin1();
+                    cell.occupied = ((ch == '#' || ch == '~') ? true : false);
+                    if(ch == '1' || ch == '2') cell.player = (ch == '1') ? 1 : 2;
+                    else cell.player = 0;  // not a place to drag things
+                    QPointF scenePos(sceneX, sceneY);
                     board[snapToGrid(scenePos)] = cell;
-
-                    col++; // Skip next character since we've processed it
+                    if(ch == '1' || ch == '2') textItem->setHtml(QString("<span style='color: rgb(255, 25, 255);'>%1</span>").arg(chStr));
+                    else textItem->setHtml(QString("<span style='color: rgb(255, 215, 0);'>%1</span>").arg(chStr));
                 }
             }
+            ++row;
         }
+
+        file.close();
     }
+
     ui->graphicsView->setScene(scene);
-    ui->graphicsView->setRenderHint(QPainter::Antialiasing);
-
-    // Ensure the view is properly scaled
-    ui->graphicsView->fitInView(scene->sceneRect(), Qt::KeepAspectRatio);
-
-    // Zoom in a bit more for better visibility
-    ui->graphicsView->scale(17, 17);
     StartGame();
+
 }
-// Hexagon dimensions
-
-
-
-
 std::pair<int, int> MainWindow::snapToGrid(QPointF scenePos) {
     int x = static_cast<int>(scenePos.x());
     int y = static_cast<int>(scenePos.y());
@@ -319,12 +219,8 @@ void MainWindow::Change_button_state()
     if (selectedButton == clickedButton) {
         clickedButton->setChecked(false);
         selectedButton = nullptr;
-
-        hexController->clearSelection();
-
         AgentSelected = false;
         agentSelectedChar = '\0';
-
         return;
     }
 
@@ -334,21 +230,15 @@ void MainWindow::Change_button_state()
 
     clickedButton->setChecked(true);
     selectedButton = clickedButton;
-
-    hexController->setAgentSelected(true);
-
     AgentSelected = true;
     agentSelectedChar = clickedButton->text().at(0);
-
 }
 
 
 void MainWindow::StartGame()
 {
-
     disconnect(ui->Agent1, &QPushButton::clicked, this, &MainWindow::on_Agent1_clicked);
     disconnect(ui->Agent2, &QPushButton::clicked, this, &MainWindow::on_Agent2_clicked);
-
 
     QList<QPushButton*> buttons = {
         ui->button11, ui->button21, ui->button31, ui->button41,
@@ -358,10 +248,8 @@ void MainWindow::StartGame()
     for (QPushButton* button : buttons) {
         connect(button, &QPushButton::clicked, this, &MainWindow::Change_button_state);
     }
-
     // connect(ui->Agent1, &QPushButton::clicked, this, &MainWindow::on_Agent1_clicked);
     // connect(ui->Agent2, &QPushButton::clicked, this, &MainWindow::on_Agent2_clicked);
-
 
 }
 
@@ -387,60 +275,25 @@ void MainWindow::on_Agent1_clicked()
 
 void MainWindow::on_Agent2_clicked()
 {
-
-    if(currentPlayer != 2) return;
-
-    ui->Frame2->setHidden(!ui->Frame2->isHidden());
-
     // Only allow interaction if it's player 2's turn
     if(currentPlayer != 2) return;
 
     ui->Frame2->setHidden(!ui->Frame2->isHidden());
     // Hide player 1's frame if showing
-
     if(!ui->Frame1->isHidden()) ui->Frame1->setHidden(true);
 }
 
 bool MainWindow::eventFilter(QObject *obj, QEvent *event)
 {
 
-    if (obj == ui->graphicsView->viewport() && event->type() == QEvent::MouseButtonPress) {
-        QMouseEvent *mouseEvent = static_cast<QMouseEvent*>(event);
-        QPointF scenePos = ui->graphicsView->mapToScene(mouseEvent->pos());
-        return hexController->handleHexagonClick(scenePos);
-    }
-    return QMainWindow::eventFilter(obj, event);
-}
-
-void MainWindow::onPlayerChanged(int newPlayer)
-{
-    currentPlayer = newPlayer;
-
-    if (currentPlayer == 1) {
-        ui->Agent1->setDisabled(false);
-        ui->Agent2->setDisabled(true);
-        ui->Frame1->setHidden(false);
-
-
     if(currentPlayer == 1) {
         ui->Agent1->setDisabled(false);
         ui->Agent2->setDisabled(true);
-
         ui->Frame2->setHidden(true);
     } else {
         ui->Agent1->setDisabled(true);
         ui->Agent2->setDisabled(false);
         ui->Frame1->setHidden(true);
-
-        ui->Frame2->setHidden(false);
-    }
-
-    if (selectedButton) {
-        selectedButton->setChecked(false);
-        selectedButton = nullptr;
-    }
-}
-
     }
 
 

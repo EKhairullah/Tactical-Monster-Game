@@ -1,0 +1,26 @@
+<RCC>
+    <qresource prefix="/boards">
+        <file>grids/grid8.txt</file>
+        <file>grids/grid7.txt</file>
+        <file>grids/grid6.txt</file>
+        <file>grids/grid5.txt</file>
+        <file>grids/grid4.txt</file>
+        <file>grids/grid3.txt</file>
+        <file>grids/grid2.txt</file>
+        <file>grids/grid1.txt</file>
+    </qresource>
+    <qresource prefix="/chars">
+        <file>character.jpeg</file>
+        <file>char4.jpeg</file>
+        <file>char3.jpeg</file>
+        <file>char2.jpeg</file>
+        <file>sheet.png</file>
+        <file>char6.jpg</file>
+        <file>char7.png</file>
+        <file>char10.png</file>
+        <file>char9.png</file>
+        <file>char8.png</file>
+        <file>char11.svg</file>
+        <file>tarot-00-the-fool.png</file>
+    </qresource>
+</RCC>
